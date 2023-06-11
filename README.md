@@ -1,26 +1,23 @@
 # EXP 07 - CREATE A PROGRAM IN AGGREGATE FUNCTION IN SQL
 
 ## AIM:
-
-To create asql program in aggregate function in SUM(),COUNT(),AVG() OPERATIONS.
+### To create asql program in aggregate function in SUM(),COUNT(),AVG() OPERATIONS.
 
 ## ALGORITHM:
 
-1) Initialize the accumulator variable(s) based on the type of aggregate functioN
-2) Retrieve the data from the table or source based on the query's filtering conditions, if any.
-3) Iterate over the retrieved data.
-4) For each row:
-      * Update the accumulator variable(s) based on the type of aggregate function
-          * For SUM(): Add the value of the selected column to the sum variable.
-          * For COUNT(): Increment the count variable by one.
-          * For AVG(): Add the value of the selected column to the sum variable and increment the count variable by one.
-5) After iterating over all the row
-6) Display or use the result of the aggregate function as needed.
+### 1) Initialize the accumulator variable(s) based on the type of aggregate functioN
+### 2) Retrieve the data from the table or source based on the query's filtering conditions, if any.
+### 3) Iterate over the retrieved data.
+### 4) For each row:
+###      * Update the accumulator variable(s) based on the type of aggregate function
+###      * For SUM(): Add the value of the selected column to the sum variable.
+###      * For COUNT(): Increment the count variable by one.
+###      * For AVG(): Add the value of the selected column to the sum variable and increment the count variable by one.
+### 5) After iterating over all the row
+### 6) Display or use the result of the aggregate function as needed.
 
 ## PROGRAM:
-
-java
-
+```
 -- Create the table
 CREATE TABLE Worker (
   WORKER_ID INT NOT NULL PRIMARY KEY,
@@ -50,7 +47,7 @@ SELECT * FROM Worker;
 SELECT SUM(SALARY) AS sum_of_total_salary FROM Worker;
 SELECT COUNT(*) AS count_of_total_workers FROM Worker;
 SELECT AVG(SALARY) AS average_salary FROM Worker;
-
+```
 ## OUTPUT:
 
 ### TABLE FOR WORKERS:
@@ -62,5 +59,4 @@ SELECT AVG(SALARY) AS average_salary FROM Worker;
 <img width="296" alt="image" src="https://github.com/Monisha-11/EXP-07---AGGREGATE-FUNCTION/assets/93427240/e67e2199-d1fc-419f-b057-060aafcb6e4d">
 
 ## RESULT:
-
-Thus we have successfully obtained the required result using the above-given code.
+### Thus we have successfully obtained the required result using the above-given code.
